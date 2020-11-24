@@ -94,12 +94,24 @@ $(document).ready(function () {
         Output them to td#firstLast
          */
 
+        var first = myArray[0];
+        var last = myArray[myArray.length -1];
+
+        $("td#firstLast").text(first + " " + last);
 
         /*
         Find the first string that contains an 'n'.
         Output it to td#firstEnn
          */
-
+        var firstEnn = [];
+        for (var i = 0; i<myArray.length; i++){
+            if(myArray[i].indexOf("n") !== -1)
+            {
+                firstEnn.push(myArray[i]);
+                {break;}
+            }
+        }
+        $("td#firstEnn").text(firstEnn);
 
         /*
         Find all of the strings with less than 6 characters.
